@@ -1,0 +1,15 @@
+.options {
+    margin: 20px 0;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    background: transparent;
+    cursor: pointer;
+  }
