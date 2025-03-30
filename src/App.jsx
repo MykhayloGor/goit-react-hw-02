@@ -25,8 +25,8 @@ const App = () => {
     localStorage.setItem("cafeFeedback", JSON.stringify(feedback));
   }, [feedback]);
 
-  const onLeaveFeedback = (option) => {
-    setFeedback({ ...feedback, [option]: feedback[option] + 1 });
+  const updateFeedback = (feedbackType) => {
+    setFeedback({ ...feedback, [feedbackType]: feedback[feedbackType] + 1 });
   };
 
   const resetFeedback = () => {
@@ -41,7 +41,7 @@ const App = () => {
     <div className="container">
       <Description />
       <Options
-        updateFeedback={onLeaveFeedback}
+        updateFeedback={updateFeedback}
         totalFeedback={totalFeedback}
         resetFeedback={resetFeedback}
       />
